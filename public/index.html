@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PacFrame - The better iframe</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>PacFrame</h1>
+      <p>A custom iframe implementation</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="demo-controls">
+      <h2>Try it out</h2>
+      <div class="input-group">
+        <input type="text" id="url-input" placeholder="Enter a URL (e.g., https://wikipedia.org)" value="https://wikipedia.org">
+        <button id="load-btn">Load Website</button>
+      </div>
+      <div class="options">
+        <label>
+          <input type="checkbox" id="animation-toggle" checked>
+          Enable Pacman animations
+        </label>
+        <div class="size-controls">
+          <label for="frame-width">Width:</label>
+          <input type="range" id="frame-width" min="50" max="100" value="100">
+          <span id="width-value">100%</span>
+          
+          <label for="frame-height">Height:</label>
+          <input type="range" id="frame-height" min="200" max="800" value="500">
+          <span id="height-value">500px</span>
+        </div>
+      </div>
+      <p class="note">Note: Some websites may not allow embedding due to security policies.</p>
+    </section>
+
+    <section class="demo-container" id="demo-container">
+    </section>
+
+    <section class="code-example">
+      <h2>How to use</h2>
+      <pre><code>
+&lt;!-- Include the scripts -->
+&lt;script src="js/pacman.js">&lt;/script>
+&lt;script src="js/pacframe.js">&lt;/script>
+
+&lt;!-- Use PacFrame -->
+&lt;script>
+  // Basic usage
+  pacframe.embed("https://wikipedia.org", "container-id");
+  
+  // With options
+  pacframe.embed("https://wikipedia.org", "container-id", {
+    width: "100%",
+    height: "500px",
+    showAnimation: true,
+    loadingText: "Chomping bytes..."
+  });
+&lt;/script>
+      </code></pre>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 PacFrame - A custom iframe solution</p>
+    </div>
+  </footer>
+  <script src="js/pacman.js"></script>
+  <script src="js/pacframe.js"></script>
+  <script src="js/demo.js"></script>
+</body>
+</html>
