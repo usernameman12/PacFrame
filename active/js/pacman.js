@@ -1,6 +1,6 @@
 const pacman = (function() {
   const COLORS = {
-    pacman: '#FFCC00',
+    pacman: '#FFCC00', // idfk
     ghost1: '#FF0000', // Red
     ghost2: '#FFB8FF', // Pink
     ghost3: '#00FFFF', // Cyan
