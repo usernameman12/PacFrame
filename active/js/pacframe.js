@@ -1,8 +1,3 @@
-/**
- * PacFrame.js - A custom iframe implementation with Pacman theming
- * Allows embedding websites with a stylish frame and loading animation
- */
-
 const pacframe = (function() {
   // Private variables
   let frameCounter = 0;
